@@ -1,0 +1,75 @@
+:root {
+  --primary: #fff;
+  --white: #fff;
+  --grey: #dbd7d7;
+  --black: #242424;
+  --blue: #276afb;
+  --red: #f00946;
+  --navy: #1c2237;
+}
+
+.btn {
+  padding: 8px 20px;
+  border-radius: 14px;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.btn-primary {
+  background-color: var(--navy);
+  color: var(--white);
+
+  &:hover {
+    background-color: var(--grey);
+    color: var(--navy);
+    opacity: 0.85;
+  }
+}
+
+.btn-outline {
+  background: transparent;
+  color: var(--black);
+  padding: 8px 20px;
+  border: 1px solid var(--primary);
+  transition: all 0.3s ease-out;
+}
+
+.no-border {
+  border: none;
+  color: var(--navy);
+
+  &:hover {
+    background-color: var(--grey);
+    color: var(--black);
+  }
+}
+
+.btn-medium {
+  padding: 8px 20px;
+  font-size: 18px;
+}
+
+.btn-large {
+  padding: 12px 26px;
+  font-size: 20px;
+}
+
+.btn-mobile {
+  text-align: center;
+  border-radius: 4px;
+  width: 80%;
+  text-decoration: none;
+  font-size: 1.5rem;
+  background-color: transparent;
+  color: var(--white);
+  padding: 14px 20px;
+  border: 1px solid var(--white);
+  transition: all 0.3s ease-out;
+}
+
+.btn--wide {
+  padding: 0.9rem 3rem;
+  font-size: 1.2rem;
+}

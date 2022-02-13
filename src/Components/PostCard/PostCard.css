@@ -1,0 +1,11 @@
+.card {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 450px;
+  height: 350px;
+  padding: 2rem;
+  border: 1px solid slateblue;
+}
+/*# sourceMappingURL=PostCard.css.map */

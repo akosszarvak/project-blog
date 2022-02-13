@@ -1,0 +1,39 @@
+.createPost {
+  flex-direction: column;
+  align-items: center;
+  height: 90vh;
+
+  h1 {
+    margin-bottom: 4rem;
+  }
+
+  .createPostForm {
+    flex-direction: column;
+
+    width: 100%;
+    margin: 0;
+    align-items: center;
+    .row {
+      width: 80%;
+      h4 {
+        margin: 0;
+      }
+      input {
+        width: 100%;
+        margin-bottom: 2rem;
+        border: 2px solid #c4c1c1;
+        height: 3rem;
+      }
+      textarea {
+        width: 100%;
+        max-width: 100%;
+        margin-bottom: 2rem;
+        border: 2px solid #c4c1c1;
+        height: 15rem;
+      }
+      .btn {
+        align-self: center;
+      }
+    }
+  }
+}

@@ -1,0 +1,98 @@
+.nav-outer {
+  width: 100%;
+  background-color: #e2dddd;
+}
+
+.nav-container {
+  height: 80px;
+  background-color: #e2dddd;
+  color: #000;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  top: 0;
+  z-index: 999;
+  width: 100%;
+  max-width: 1350px;
+  padding: 0 1.2rem;
+  font-size: 1.2rem;
+}
+
+.nav-container .left-col .logo {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.nav-container .nav-menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.nav-container .nav-menu .links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  color: #000;
+  text-decoration: none;
+  margin-right: 0.8rem;
+  cursor: pointer;
+}
+
+.nav-container .nav-menu .links:hover {
+  opacity: 0.9;
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+.nav-container .menu-icon {
+  display: none;
+}
+
+@media screen and (max-width: 768px) {
+  .nav-container {
+    padding: 5 5px;
+    position: relative;
+  }
+  .nav-container .menu-icon {
+    display: contents;
+    color: #000;
+  }
+  .nav-menu {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    top: 80px;
+    left: -100%;
+    opacity: 1;
+    -webkit-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+  }
+  .nav-menu.active {
+    background: #1c2237;
+    left: 0;
+    opacity: 1;
+    -webkit-transition: all 0.6s ease;
+    transition: all 0.6s ease;
+    z-index: 1;
+  }
+  .nav-menu.active .links {
+    color: #fff;
+    text-align: center;
+    padding: 2rem;
+    width: 100%;
+    display: table;
+  }
+}
+/*# sourceMappingURL=Navbar.css.map */

@@ -1,0 +1,56 @@
+.createPost {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 90vh;
+}
+
+.createPost h1 {
+  margin-bottom: 4rem;
+}
+
+.createPost .createPostForm {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100%;
+  margin: 0;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.createPost .createPostForm .row {
+  width: 80%;
+}
+
+.createPost .createPostForm .row h4 {
+  margin: 0;
+}
+
+.createPost .createPostForm .row input {
+  width: 100%;
+  margin-bottom: 2rem;
+  border: 2px solid #c4c1c1;
+  height: 3rem;
+}
+
+.createPost .createPostForm .row textarea {
+  width: 100%;
+  max-width: 100%;
+  margin-bottom: 2rem;
+  border: 2px solid #c4c1c1;
+  height: 15rem;
+}
+
+.createPost .createPostForm .row .btn {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+/*# sourceMappingURL=CreatePost.css.map */
