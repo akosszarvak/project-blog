@@ -28,6 +28,17 @@
   }
 }
 
+.btn-warning {
+  background-color: var(--red);
+  color: var(--white);
+
+  &:hover {
+    background-color: var(--red);
+    color: var(--white);
+    opacity: 0.85;
+  }
+}
+
 .btn-outline {
   background: transparent;
   color: var(--black);

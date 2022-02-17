@@ -1,8 +1,19 @@
 .card {
   flex-direction: column;
-  width: 450px;
-  height: 350px;
+  max-width: 550px;
+  width: 90%;
+  height: 100%;
   padding: 2rem;
+  background-color: #ece8e8;
+  border: 1px solid #363535;
 
-  border: 1px solid slateblue;
+  .title {
+    h4 {
+      margin: 0;
+    }
+  }
+  .info-row {
+    font-style: italic;
+    margin: 0.2rem 0;
+  }
 }

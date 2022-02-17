@@ -1,11 +1,12 @@
 import React, { useEffect, useState } from "react";
 import "./Home.scss";
 import "../../App.scss";
-import { collection, doc, getDocs } from "firebase/firestore";
+import { collection, doc, getDocs, deleteDoc } from "firebase/firestore";
 import { db } from "../../firebase-config";
 import PostCard from "../../Components/PostCard/PostCard";
+import { Button } from "../../Components/Button/Button";
 
-export default function Home() {
+export default function Home({ isAuth }) {
   const [postLists, setPostList] = useState([]);
   let postsCollectionRef = collection(db, "posts");
 
@@ -23,7 +24,12 @@ export default function Home() {
     //   mounted = false;
     // };
   });
-  // Tried to sort the posts by date, but firebase quota exceeded due to setpostlist console log infinite cycle, check if its working next day or so
+
+  const deletePost = async (id) => {
+    const postDoc = doc(db, "posts", id);
+    await deleteDoc(postDoc);
+  };
+
   return (
     <div className="homePage container">
       {postLists
@@ -31,11 +37,25 @@ export default function Home() {
         .map((post) => {
           return (
             <div className="postOuter grid-item" key={post.id}>
+              {" "}
+              {isAuth && (
+                <Button
+                  style="btn btn-primary btn-warning"
+                  onClick={() => {
+                    deletePost(post.id);
+                  }}
+                >
+                  delete post
+                </Button>
+              )}
               <PostCard
                 title={post.title}
                 author={post.author.name}
-                text={post.postText.substring(0, 180)}
-              ></PostCard>
+                text={post.postText}
+                date={post.createdAt}
+              >
+                {" "}
+              </PostCard>
             </div>
           );
         })}

@@ -18,7 +18,6 @@ export default function CreatePost({ isAuth }) {
       title: title,
       postText: postText,
       author: { name: auth.currentUser.displayName, id: auth.currentUser.uid },
-      createdAt: Timestamp.now().toDate(),
     });
     navigate("/");
   };
